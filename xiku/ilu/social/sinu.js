@@ -1,5 +1,5 @@
 // api.sinu - Fetch and display social media links
-const Sinu= document.querySelector('sinu').dataset('prem');
+const Sinu= document.querySelector('sinu').getAttribute('prem');
 async function loadSocialLinks() {
   try {
     const response = await fetch('Sinu');
