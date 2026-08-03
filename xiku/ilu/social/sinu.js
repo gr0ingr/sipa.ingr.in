@@ -76,6 +76,7 @@
         youtube: (u) => `https://youtube.com/@${u}`,
         instagram: (u) => `https://instagram.com/${u}`,
         facebook: (u) => `https://facebook.com/${u}`,
+          facebookPage:(u)=>`https://www.facebook.com/profile.php?id=${u}`
         twitter: (u) => `https://twitter.com/${u}`,
         linkedin: (u) => `https://linkedin.com/in/${u}`,
         github: (u) => `https://github.com/${u}`
@@ -113,8 +114,8 @@
         link.href = urlPatterns[platform](username);
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.className = 'social-link';
-        link.innerHTML = `<i class="${iconClass[platform] || 'fa-solid fa-link'}"></i> || ${icons[platform] || '🔗'} ${displayNames[platform] || platform}`;
+        link.className = 'social-link ${iconClass[platform]' ;
+        link.innerHTML = `${icons[platform] || '🔗'} ${displayNames[platform] || platform}`;
         link.classList.add(`platform-${platform}`);
         container.appendChild(link);
       }
