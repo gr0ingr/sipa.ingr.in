@@ -98,6 +98,14 @@
         linkedin: '💼',
         github: '🐙'
       };
+       const iconClass = {
+  youtube: "fa-brands fa-youtube",
+  instagram: "fa-brands fa-instagram",
+  facebook: "fa-brands fa-facebook",
+  twitter: "fa-brands fa-x-twitter",
+  linkedin: "fa-brands fa-linkedin",
+  github: "fa-brands fa-github"
+};
 
       for (const [platform, username] of Object.entries(data)) {
         if (!username || !urlPatterns[platform]) continue;
@@ -106,7 +114,7 @@
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
         link.className = 'social-link';
-        link.innerHTML = `${icons[platform] || '🔗'} ${displayNames[platform] || platform}`;
+        link.innerHTML = `<i class="${iconClass[platform] || 'fa-solid fa-link'}"></i> || ${icons[platform] || '🔗'} ${displayNames[platform] || platform}`;
         link.classList.add(`platform-${platform}`);
         container.appendChild(link);
       }
