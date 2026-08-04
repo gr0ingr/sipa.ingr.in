@@ -1,6 +1,6 @@
 // main.js - Main entry point
 import { loadSocialLinks } from 'https://www.sipa.ingr.in/janvikantumae.js';
-import { renderSocialLinks } from './janvikantumae.js';
+import { renderSocialLinks } from 'https://www.sipa.ingr.in/jgpri.js';
 import { updateYear } from 'https://www.sipa.ingr.in/varsha.js';
 
 (function() {
