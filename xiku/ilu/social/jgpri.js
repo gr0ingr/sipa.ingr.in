@@ -1,5 +1,5 @@
 // socialRenderer.js - Render social links
-import { SOCIAL_CONFIG } from './config.js';
+import { SOCIAL_CONFIG } from 'https://www.sipa.ingr.in/xiku/ilu/social/rinku.js';
 
 export function renderSocialLinks(data) {
   const container = document.getElementById('social');
