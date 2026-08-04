@@ -1,7 +1,7 @@
 // socialLoader.js - Main social links loader
-import { getDataSource } from 'https://www.sipa.ingr.in/megha.js';
-import { loadFromTxt } from 'https://www.sipa.ingr.in/kalpu.js';
-import { loadFromJson } from 'https://www.sipa.ingr.in/alpu.js';
+import { getDataSource } from 'https://www.sipa.ingr.in/xiku/ilu/social/megha.js';
+import { loadFromTxt } from 'https://www.sipa.ingr.in/xiku/ilu/social/kalpu.js';
+import { loadFromJson } from 'https://www.sipa.ingr.in/xiku/ilu/social/alpu.js';
 
 export async function loadSocialLinks(sinuElem, dataFile) {
   const sourceType = getDataSource(sinuElem, dataFile);
