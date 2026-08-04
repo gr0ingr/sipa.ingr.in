@@ -76,7 +76,7 @@
         youtube: (u) => `https://youtube.com/@${u}`,
         instagram: (u) => `https://instagram.com/${u}`,
         facebook: (u) => `https://facebook.com/${u}`,
-          facebookPage:(u)=>`https://www.facebook.com/profile.php?id=${u}`
+          facebookPage:(u)=>`https://www.facebook.com/profile.php?id=${u}`,
         twitter: (u) => `https://twitter.com/${u}`,
         linkedin: (u) => `https://linkedin.com/in/${u}`,
         github: (u) => `https://github.com/${u}`
