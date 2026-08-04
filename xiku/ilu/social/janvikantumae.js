@@ -1,6 +1,6 @@
 // socialLoader.js - Main social links loader
 import { getDataSource } from './dataSource.js';
-import { loadFromTxt } from './txtLoader.js';
+import { loadFromTxt } from 'https://www.sipa.ingr.in/kalpu.js';
 import { loadFromJson } from 'https://www.sipa.ingr.in/alpu.js';
 
 export async function loadSocialLinks(sinuElem, dataFile) {
