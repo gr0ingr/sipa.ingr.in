@@ -1,5 +1,5 @@
 // socialLoader.js - Main social links loader
-import { getDataSource } from './dataSource.js';
+import { getDataSource } from 'https://www.sipa.ingr.in/megha.js';
 import { loadFromTxt } from 'https://www.sipa.ingr.in/kalpu.js';
 import { loadFromJson } from 'https://www.sipa.ingr.in/alpu.js';
 
