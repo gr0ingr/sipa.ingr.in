@@ -1,18 +1,27 @@
 // main.js - Main entry point
-import { loadSocialLinks } from 'https://www.sipa.ingr.in/xiku/ilu/social/janvikantumae.js';
-import { renderSocialLinks } from 'https://www.sipa.ingr.in/xiku/ilu/social/jgpri.js';
-import { updateYear } from 'https://www.sipa.ingr.in/xiku/ilu/social/varsha.js';
+const baseUrl = 'https://www.sipa.ingr.in/xiku/ilu/social';
 
-(function() {
+(async function() {
   "use strict";
 
   const sinuElem = document.querySelector('sinu');
   const dataFile = sinuElem ? sinuElem.getAttribute('prem') : 'prem';
 
   document.addEventListener('DOMContentLoaded', async () => {
-    const data = await loadSocialLinks(sinuElem, dataFile);
-    renderSocialLinks(data);
-    updateYear();
+    try {
+      // Dynamic imports with proper error handling
+      const [{ loadSocialLinks }, { renderSocialLinks }, { updateYear }] = await Promise.all([
+        import(`${baseUrl}/janvikantumae.js`),
+        import(`${baseUrl}/jgpri.js`),
+        import(`${baseUrl}/varsha.js`)
+      ]);
+
+      const data = await loadSocialLinks(sinuElem, dataFile);
+      renderSocialLinks(data);
+      updateYear();
+    } catch (error) {
+      console.error('Failed to load modules or initialize:', error);
+    }
   });
 
 })();
